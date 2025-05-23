@@ -1,7 +1,9 @@
 package project2;
 
 public class Animal {
+    @SuppressWarnings("unused")
     private String name;
+    @SuppressWarnings("unused")
     private String age;
 
     public void eat(){

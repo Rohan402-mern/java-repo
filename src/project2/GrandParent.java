@@ -4,7 +4,8 @@ public class GrandParent {
 
     private final boolean hasSuperpowers;
     private int age ;
-    private String name;
+    @SuppressWarnings("unused")
+    private final String name;
     public GrandParent(int age, String name){
         this.age = age;
         this.name = name;

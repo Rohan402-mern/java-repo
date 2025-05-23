@@ -1,8 +1,11 @@
 package Interface;
 
 public class Computer {
+    @SuppressWarnings({"unused", "FieldMayBeFinal"})
     private String brand;
+    @SuppressWarnings("FieldMayBeFinal")
     private String model;
+    @SuppressWarnings("FieldMayBeFinal")
     private OperatingSystem os;
 
     public Computer(String brand,String model,String osName){
@@ -16,6 +19,7 @@ public class Computer {
     }
 
     public static class USB{
+        @SuppressWarnings("FieldMayBeFinal")
         private String Type;
 
         public USB(String Type){
@@ -30,6 +34,7 @@ public class Computer {
 
     public class OperatingSystem{
 
+        @SuppressWarnings("FieldMayBeFinal")
         private String osName;
 
         public OperatingSystem(String osName){

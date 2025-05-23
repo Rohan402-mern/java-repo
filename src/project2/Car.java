@@ -1,7 +1,9 @@
 package project2;
 
 public class Car {
+    @SuppressWarnings({"unused", "FieldMayBeFinal"})
     private  String brand;
+    @SuppressWarnings({"unused", "FieldMayBeFinal"})
     private String model;
     private float speed ;
 

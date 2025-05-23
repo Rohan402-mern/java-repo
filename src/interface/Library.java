@@ -3,6 +3,7 @@ package Interface;
 import java.util.ArrayList;
 
 public class Library {
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     ArrayList<Book> books = new ArrayList();
 
    public void showAvailableBooks(){

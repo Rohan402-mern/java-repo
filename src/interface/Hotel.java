@@ -2,7 +2,9 @@ package Interface;
 
 public class Hotel {
 
+    @SuppressWarnings({"FieldMayBeFinal", "unused"})
     private String name;
+    @SuppressWarnings("FieldMayBeFinal")
     private int totalrooms;
     private int reservedRooms;
 
