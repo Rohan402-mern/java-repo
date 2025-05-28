@@ -1,0 +1,182 @@
+That's a great idea! Practicing Executor Framework problems from beginner to advanced will help you master Java's powerful multithreading capabilities.
+
+Below is a curated list of coding problems, progressing from basic concepts to real-world concurrency scenarios, all using the Executor Framework (ExecutorService, Callable, Future, etc.).
+
+✅ Beginner Level
+🔹 1. Run Multiple Tasks in Parallel
+Goal: Use ExecutorService to run 5 simple tasks that print numbers from 1 to 5.
+
+🔸 Concepts: Runnable, Executors.newFixedThreadPool(), submit()
+
+🔹 2. Calculate Square of Numbers in Parallel
+Goal: Given an array of integers, calculate the square of each number using threads.
+
+🔸 Concepts: Callable, Future, collect results.
+
+🔹 3. Wait for All Tasks to Finish
+Goal: Submit 3 tasks using ExecutorService. Wait for all to finish and print “All done”.
+
+🔸 Concepts: shutdown(), awaitTermination()
+
+🔹 4. Download URLs Simultaneously (Simulated)
+Goal: Use Callable to simulate downloading 5 URLs and return "Downloaded: URL".
+
+🔸 Concepts: Return value with Future.get()
+
+🟡 Intermediate Level
+🔹 5. Task with Tim eout
+Goal: Submit a task and wait only 2 seconds for its result.
+
+🔸 Concepts: Future.get(timeout, TimeUnit.SECONDS)
+
+🔹 6. Cancel a Long-Running Task
+Goal: Submit a task that sleeps 5 seconds. Cancel it after 2 seconds.
+
+🔸 Concepts: Future.cancel(true), isCancelled(), Thread.interrupt()
+
+🔹 7. Create a Thread Pool with Custom Thread Names
+Goal: Use ThreadFactory to name threads like Worker-1, Worker-2.
+
+🔸 Concepts: Executors.newFixedThreadPool(), custom ThreadFactory
+
+🔹 8. Scheduled Task (Reminder App)
+Goal: Print a reminder every 3 seconds.
+
+🔸 Concepts: ScheduledExecutorService, scheduleAtFixedRate()
+
+🔴 Advanced / Real-World Scenarios
+🔹 9. Process Orders with Callable and Return Results
+Goal: Simulate an e-commerce app: each thread processes an order and returns confirmation.
+
+🔸 Concepts: Callable, ExecutorService, Future, real-world simulation
+
+🔹 10. Parallel File Processing (Simulated)
+Goal: Simulate reading multiple files using a thread pool, return lines read.
+
+🔸 Concepts: Fixed thread pool, Callable, file-like simulation
+
+🔹 11. Thread Pool Metrics Logger
+Goal: Periodically log how many threads are active and tasks are completed.
+
+🔸 Concepts: ThreadPoolExecutor, getActiveCount(), getCompletedTaskCount()
+
+🔹 12. Producer-Consumer with Executors
+Goal: Use BlockingQueue with Executors to simulate producers and consumers.
+
+🔸 Concepts: BlockingQueue, ExecutorService, real-world coordination
+
+🔹 13. Retry Failed Tasks with Executors
+Goal: Resubmit a task if it fails up to 3 times.
+
+🔸 Concepts: Future, try-catch, resubmission logic
+
+🔹 14. Parallel Web Crawler (Mini Version)
+Goal: Given a list of links, download them in parallel and store results.
+
+🔸 Concepts: ExecutorCompletionService, Callable, result aggregation
+
+📦 Bonus: Combine with Java 8+
+Use Lambdas with Callable and Runnable.
+
+Combine Streams + ExecutorService for hybrid solutions.
+
+✅ Ready to Start?
+If you'd like, I can:
+
+Provide full working code for any of the above.
+
+Help you set up a practice project structure.
+
+Give unit test cases for the problems.
+
+👉 Just tell me the number of the problem you want to solve first, and I’ll walk you through it step by step.
+
+
+
+new -------------------------------------------
+
+✅ Beginner Level – Getting Comfortable
+1. Hello from Threads
+Write a program that creates a fixed thread pool of 3 threads, and submit 5 tasks that each print "Hello from thread X" where X is the thread name.
+
+🧠 Concepts: FixedThreadPool, Runnable, Thread naming
+
+2. Download Simulated Files
+Simulate downloading 5 files using a thread pool. Each task should sleep for 1 second and then print that the file is downloaded.
+
+🧠 Concepts: Runnable, Executors.newFixedThreadPool, task queue
+
+3. Shutdown Behavior
+Create a program that submits 5 tasks, then calls shutdown(). Add a sixth task after shutdown and observe the result.
+
+🧠 Concepts: shutdown, rejected tasks
+
+🔁 Intermediate Level – Returning Results
+4. Callable for Sum
+Use Callable to submit a task that calculates and returns the sum of numbers from 1 to 100.
+
+🧠 Concepts: Callable, Future, result retrieval
+
+5. Parallel Factorials
+Submit 5 factorial computation tasks using Callable. Each task should compute factorial of a number and return the result.
+
+🧠 Concepts: Callable, multiple futures, result aggregation
+
+6. Wait for All Results
+Submit multiple Callable tasks and wait until all tasks complete, then print their results.
+
+🧠 Concepts: Future.get(), coordination
+
+🚦 Advanced Level – Performance and Coordination
+7. Time Comparison: Sequential vs Executor
+Write two versions of the same task (e.g. download 5 movies):
+
+One using sequential execution.
+
+One using ExecutorService.
+Compare and print time taken.
+
+🧠 Concepts: Parallelism performance
+
+8. Fixed vs Cached Thread Pool
+Submit 100 small tasks (e.g. printing or sleeping 100ms) to:
+
+A fixed thread pool of size 5.
+
+A cached thread pool.
+Measure time difference.
+
+🧠 Concepts: Pool types, dynamic thread growth
+
+9. Task Timeout Handling
+Submit a task that takes 5 seconds, and try to get its result with a timeout of 2 seconds.
+
+🧠 Concepts: Future with timeout, TimeoutException
+
+10. Race Condition with Shared Counter (Without Lock)
+Use 10 threads to increment a shared counter. Observe how the final value may be incorrect due to race conditions.
+
+🧠 Concepts: Shared state, synchronization needs
+
+Bonus: Fix it using AtomicInteger or synchronized.
+
+💡 Expert / Real-World Challenges
+11. Web Crawler Simulation
+Create a thread pool to simulate crawling 100 URLs (just sleep + print), limiting concurrency to 10.
+
+🧠 Concepts: Bounded thread pools, task throttling
+
+12. Producer-Consumer with Executor
+Simulate a producer generating 100 tasks and consumers (executor threads) processing them.
+
+🧠 Concepts: Thread coordination, queue management
+
+13. Retry Failed Tasks
+Submit a task that randomly fails. If it fails, resubmit it up to 3 times. Track which ones succeed.
+
+🧠 Concepts: Retry logic, resilience, result handling
+
+14. Order-Preserving Parallel Execution
+Submit tasks that sleep random times but ensure that results are printed in the same order they were submitted.
+
+🧠 Concepts: Result ordering, indexed future list

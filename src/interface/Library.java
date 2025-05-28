@@ -3,7 +3,7 @@ package Interface;
 import java.util.ArrayList;
 
 public class Library {
-    @SuppressWarnings({ "rawtypes", "unchecked" })
+    
     ArrayList<Book> books = new ArrayList();
 
    public void showAvailableBooks(){
@@ -22,6 +22,14 @@ public class Library {
             }
         }
         return null;
+    }
+
+    public void setBooks(ArrayList<Book> books) {
+        this.books = books;
+    }
+
+    public ArrayList<Book> getBooks() {
+        return books;
     }
 
 }
