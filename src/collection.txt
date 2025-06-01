@@ -1,0 +1,9 @@
+ Student Management System (using List and Map)
+
+✅ Library Book Catalog (using HashMap and TreeSet)
+
+✅ Online Cart System (as we've done!)
+
+✅ To-do List App (using LinkedList or Deque)
+
+✅ Voting System (using Set to avoid duplicate votes)
